@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Integrantes de la familia</h1>
+
+    {% for family in family %}
+
+        <p>Su nombre completo es: {{family.name}}</p>
+        <p>Su edad es: {{family.age}}</p>
+
+        {% if family.married == True %}
+        <p>Esta casado</p>
+        {% else %}
+            <p>No esta casado</p>
+        {% endif %}
+
+    {% endfor %}
+</body>
+</html>
